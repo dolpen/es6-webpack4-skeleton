@@ -8,8 +8,8 @@ export default class Router {
   }
 
   fire(name, ...data){
-    var h = this.h[name];
-    if (h)return h(...data);
+    const h = this.h[name];
+    if (h) return h(...data);
     return null;
   }
 }

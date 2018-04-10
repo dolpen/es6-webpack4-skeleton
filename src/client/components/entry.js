@@ -15,9 +15,9 @@ class ReservationEntry extends React.Component {
     format = format.replace(/mm/g, ('0' + date.getMinutes()).slice(-2));
     format = format.replace(/ss/g, ('0' + date.getSeconds()).slice(-2));
     if (format.match(/S/g)){
-      var milliSeconds = ('00' + date.getMilliseconds()).slice(-3);
-      var length = format.match(/S/g).length;
-      for (var i = 0; i < length; i++) format = format.replace(/S/, milliSeconds.substring(i, i + 1));
+      const milliSeconds = ('00' + date.getMilliseconds()).slice(-3);
+      const length = format.match(/S/g).length;
+      for (let i = 0; i < length; i++) format = format.replace(/S/, milliSeconds.substring(i, i + 1));
     }
     return format;
   }
@@ -42,10 +42,10 @@ class ReservationEntry extends React.Component {
 }
 
 ReservationEntry.propTypes = {
-  del:PropTypes.func,
-  time:PropTypes.number,
-  message:PropTypes.string
+  del: PropTypes.func,
+  time: PropTypes.number,
+  message: PropTypes.string
 };
-ReservationEntry.defaultProps = { };
+ReservationEntry.defaultProps = {};
 
 export default ReservationEntry;

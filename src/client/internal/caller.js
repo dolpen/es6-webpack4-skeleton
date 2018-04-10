@@ -21,7 +21,7 @@ export default class Caller {
       //eslint-disable-next-line no-console
       console.log(message);
     } else{
-      var n = new Notification(message, opts);
+      const n = new Notification(message, opts);
       setTimeout(n.close.bind(n), 5000);
     }
   }

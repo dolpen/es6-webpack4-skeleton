@@ -5,12 +5,12 @@ export default class Queue {
   }
 
   add(e){
-    var i = this.d.filter(o => o.time < e.time).length;
+    const i = this.d.filter(o => o.time < e.time).length;
     this.d.splice(i, 0, e);
   }
 
   del(time){
-    this.d = this.d.filter(o => o.time != time);
+    this.d = this.d.filter(o => o.time !== time);
   }
 
   flush(time){

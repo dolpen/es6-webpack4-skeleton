@@ -29,8 +29,8 @@ class ReservationList extends React.Component {
 }
 
 ReservationList.propTypes = {
-  data : PropTypes.array,
-  del : PropTypes.func
+  data: PropTypes.array,
+  del: PropTypes.func
 };
 ReservationList.defaultProps = defaultProps;
 

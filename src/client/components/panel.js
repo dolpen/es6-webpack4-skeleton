@@ -30,7 +30,7 @@ class ReservationPanel extends React.Component {
 }
 
 ReservationPanel.propTypes = {
-  add : PropTypes.func
+  add: PropTypes.func
 };
 
 export default ReservationPanel;

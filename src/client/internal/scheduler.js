@@ -39,11 +39,11 @@ export default class Scheduler {
       clearTimeout(this.s);
     }
     this.f();
-    var p = this.q.head();
-    if (!p)return;
-    var ms = p.time - (new Date()).getTime();
+    const p = this.q.head();
+    if (!p) return;
+    const ms = p.time - (new Date()).getTime();
     this.s = setTimeout((function(){
-      var e = this.q.pop();
+      const e = this.q.pop();
       this.c.emit(e.message, {});
       this.s = null;
       this.resetTimer();
